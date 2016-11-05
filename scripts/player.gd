@@ -49,3 +49,4 @@ func _process(delta):
 	var movement_vector = self._get_movement_vector(delta)
 	var new_pos = curr_pos + movement_vector
 	player.set_pos(new_pos)
+	player.set_rot(new_pos.angle_to_point(get_viewport().get_mouse_pos()))
